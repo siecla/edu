@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Budujemy mosty kompetencji między Polską a Afryką – EduBridge Africa</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Studencka inicjatywa UE Wrocław: praktyczne warsztaty kompetencji cyfrowych dla szkół w okolicach Mombasy, Kenia. Dołącz jako partner.">
+  <link rel="canonical" href="https://twoj-adres-strony.example/">
+  <meta name="keywords" content="edukacja cyfrowa, Kenia, CSR, UE Wrocław, warsztaty, sztuczna inteligencja, cyberbezpieczeństwo, Mombasa">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0a0f1d">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta property="og:locale" content="pl_PL">
+
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Budujemy mosty kompetencji między Polską a Afryką – EduBridge Africa">
+  <meta property="og:description" content="Praktyczne warsztaty, wsparcie dla szkół i nauczycieli oraz społeczność działająca cyklicznie.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://twoj-adres-strony.example/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80">
+  <meta property="og:site_name" content="EduBridge Africa">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Performance -->
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://docs.google.com" crossorigin>
+  <link rel="preload" as="image" href="assets/logo.png" imagesrcset="assets/logo.png 1x, assets/logo@2x.png 2x">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" fetchpriority="high">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%8D%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root{
+      --bg:#0a0f1d; --surface:#0d1426; --surface-glass:rgba(13,20,38,.62); --surface-2:#111a31;
+      --line:#1e2a47; --txt:#e6eefb; --muted:#a9b5cf;
+      --brand:#1f6fbb; --accent:#f59a23; --accent2:#0bd3d3;
+      --radius:16px; --shadow:0 12px 40px rgba(0,0,0,.45); --maxw:1200px; --transition:.28s cubic-bezier(.2,.7,.2,1);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html,body{height:100%;overflow-x:hidden}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--txt);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+    /* Subtelna globalna poświata bez krawędzi sekcji */
+    body::before{
+      content:""; position:fixed; inset:-25vh -25vw -25vh -25vw; pointer-events:none; z-index:0;
+      background:
+        radial-gradient(42vw 28vh at 70% -6%, rgba(31,111,187,.14), transparent 62%),
+        radial-gradient(38vw 26vh at 14% 82%, rgba(245,154,35,.12), transparent 62%),
+        radial-gradient(60vw 40vh at 60% 122%, rgba(11,211,211,.07), transparent 70%);
+    }
+
+    ::selection{background:rgba(31,111,187,.35);color:#fff}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%;position:relative;z-index:1}
+    .prose{max-width:72ch}
+    header.hero{padding:110px 0 70px; position:relative}
+    section{padding:84px 0; position:relative; content-visibility:auto; contain-intrinsic-size: 800px}
+    @media (max-width:900px){section{padding:56px 0}}
+
+    .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:30px}
+    .grid>*{min-width:0}
+    .col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-7{grid-column:span 7}.col-8{grid-column:span 8}
+    @media (max-width:900px){.col-4,.col-5,.col-6,.col-7,.col-8{grid-column:span 12}}
+    .grid[data-cols="2"]{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .grid[data-cols="3"]{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    @media (max-width:900px){.grid[data-cols="2"],.grid[data-cols="3"]{grid-template-columns:1fr}}
+
+    h1,h2,h3{font-weight:700;letter-spacing:-.01em;line-height:1.2;margin-bottom:1rem}
+    h1{font-size:clamp(2.2rem,4.6vw,3.2rem)}
+    h2{font-size:clamp(1.7rem,3.2vw,2.2rem);padding-bottom:.7rem;position:relative;margin-bottom:1.6rem}
+    h2::after{content:"";position:absolute;left:0;bottom:0;width:92px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--accent))}
+    h3{font-size:clamp(1.2rem,2.2vw,1.5rem);margin-bottom:.8rem}
+    p{color:var(--muted);margin-bottom:1rem}
+    img,svg,video{max-width:100%;height:auto;display:block}
+    a{color:var(--brand);text-decoration:none;transition:color var(--transition)}
+    a:hover{color:#9cc3ff;text-decoration:underline}
+    a:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(31,111,187,.55);border-radius:10px}
+    .sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;border:0;padding:0}
+
+    .card{position:relative;background:var(--surface-glass);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);transition:transform var(--transition),box-shadow var(--transition),border-color var(--transition);backdrop-filter:saturate(140%) blur(10px)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 18px 56px rgba(0,0,0,.14);border-color:rgba(31,111,187,.45)}
+    .tilt.card:hover{transform:none}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:fixed;left:16px;top:14px;width:auto;height:auto;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;z-index:9999}
+
+    /* Pasek postępu przewijania */
+    .progress{position:fixed;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--brand),var(--accent));transform-origin:0 50%;transform:scaleX(0);z-index:120;box-shadow:0 0 12px rgba(31,111,187,.45)}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:110;background:color-mix(in oklab, var(--surface) 70%, transparent);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+    .brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+    .brand-logo{height:42px;width:auto;object-fit:contain;border-radius:6px}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:inherit;font-weight:600;position:relative}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-links a::after{content:"";position:absolute;bottom:-8px;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--brand),var(--accent));transition:width var(--transition)}
+    .mobile-toggle{display:none;background:none;border:none;font-size:1.5rem;color:inherit;cursor:pointer}
+    @media (max-width:900px){
+      .mobile-toggle{display:block}
+      .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--surface);padding:18px 20px;border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.08);flex-direction:column;gap:14px}
+      .nav.open .nav-links{display:flex}
+    }
+
+    /* Sticky CTA */
+    .sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:12px;z-index:120;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 10px;box-shadow:var(--shadow);backdrop-filter:saturate(140%) blur(8px);opacity:0;visibility:hidden;transition:all var(--transition)}
+    .sticky-cta.show{opacity:1;visibility:visible;bottom:22px}
+
+    /* HERO aura/typed */
+    .aurora{position:absolute;inset:-10% -10% -20% -10%;filter:blur(58px);pointer-events:none;z-index:0;opacity:.45;mask-image:radial-gradient(125% 95% at 50% 18%, #000 62%, transparent 92%)}
+    .aurora span{position:absolute;width:36vw;height:36vw;border-radius:50%;opacity:.55;mix-blend-mode:screen}
+    .aurora span:nth-child(1){left:5%;top:-8%;background:radial-gradient(circle at 30% 30%, rgba(31,111,187,.35), transparent 60%);animation:float1 22s ease-in-out infinite alternate}
+    .aurora span:nth-child(2){right:-8%;top:5%;background:radial-gradient(circle at 60% 40%, rgba(245,154,35,.28), transparent 60%);animation:float2 26s ease-in-out infinite alternate}
+    .aurora span:nth-child(3){left:20%;bottom:-12%;background:radial-gradient(circle at 40% 50%, rgba(11,211,211,.22), transparent 60%);animation:float3 28s ease-in-out infinite alternate}
+    @keyframes float1{to{transform:translate(4vw,5vh) scale(1.05)}}
+    @keyframes float2{to{transform:translate(-6vw,4vh) scale(1.08)}}
+    @keyframes float3{to{transform:translate(5vw,-4vh) scale(1.07)}}
+    .typed-emph{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900;letter-spacing:.2px;text-shadow:0 2px 12px rgba(31,111,187,.28);font-size:1.08em}
+    .caret{display:inline-block;width:2px;height:1.1em;background:currentColor;border-radius:1px;vertical-align:-0.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    @media (prefers-reduced-motion: reduce){.caret{display:none}}
+
+    /* Bridge Polska–Kenia */
+    .bridge{margin:14px 0 0}
+    .bridge svg{max-width:640px;width:100%;height:auto;display:block}
+    .wave{fill:none;stroke:rgba(255,255,255,.18);stroke-width:2;stroke-linecap:round;stroke-dasharray:6 8;animation:wave 5s linear infinite}
+    @keyframes wave{to{stroke-dashoffset:-140}}
+    .deck{fill:none;stroke:url(#gradBridge);stroke-width:5;filter:drop-shadow(0 4px 14px rgba(31,111,187,.35))}
+    .hanger{stroke:rgba(255,255,255,.22);stroke-width:2}
+    .tower{fill:url(#towerGrad);stroke:rgba(255,255,255,.22);stroke-width:1}
+    .flag{filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}
+
+    /* Badges & Buttons */
+    .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:linear-gradient(var(--surface-glass),var(--surface-glass)) padding-box,linear-gradient(135deg, rgba(31,111,187,.55), rgba(245,154,35,.55)) border-box;border:1px solid transparent;color:inherit;box-shadow:0 10px 24px rgba(0,0,0,.16)}
+    .badge i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0a0f1d;font-size:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:12px;font-weight:900;border:1px solid transparent;cursor:pointer;transition:transform var(--transition),box-shadow var(--transition),background var(--transition),color var(--transition);text-decoration:none!important}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#0a0f1d;border:none;box-shadow:0 12px 28px rgba(31,111,187,.30)}
+    .btn-secondary{background:linear-gradient(var(--surface-glass),var(--surface-glass)) padding-box,linear-gradient(135deg, rgba(31,111,187,.55), rgba(245,154,35,.55)) border-box;border:1px solid transparent;color:inherit}
+    .btn-secondary:hover{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04)) padding-box, linear-gradient(135deg, rgba(31,111,187,.7), rgba(245,154,35,.7)) border-box}
+
+    /* Listy, statystyki, footer */
+    .feature{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+    .icon{position:relative;flex:0 0 56px;height:56px;border-radius:16px;display:grid;place-items:center;color:#0a0f1d;font-weight:900;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 10px 28px rgba(0,0,0,.14)}
+    .list{display:grid;gap:10px;margin:0;padding:0}
+    .list li{list-style:none;position:relative;padding-left:28px;color:#eaf1ff}
+    .list li::before{content:"✓";position:absolute;left:0;top:0;color:#14b8a6;font-weight:900}
+    .pill{display:inline-flex;align-items:center;background:transparent;border:1px solid var(--line);padding:8px 14px;border-radius:999px;margin:0 8px 10px 0;font-weight:800}
+    .pill.alt{background:#162340;border-color:#2a3e68}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    @media (max-width:1100px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.stats-grid{grid-template-columns:1fr}}
+    .stat-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px;text-align:center;box-shadow:var(--shadow)}
+    .stat-value{font-weight:900;font-size:clamp(2rem,4vw,2.6rem);line-height:1;color:var(--accent2);letter-spacing:-0.02em}
+    .stat-label{margin-top:10px;color:var(--muted);font-size:1rem}
+    footer{padding:42px 0;background:color-mix(in oklab, var(--surface) 85%, #000 15%);color:color-mix(in oklab, var(--muted) 70%, #fff 30%)}
+    footer a{color:var(--brand)} footer a:hover{color:#0e7bff}
+    .footer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;margin-bottom:14px}
+    @media (max-width:768px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .social-links{display:flex;gap:12px;margin-top:12px}
+    .social-links a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgba(127,127,127,.08);transition:transform .2s ease,background .2s ease}
+    .social-links a:hover{background:var(--brand);color:#0a0f1d;transform:translateY(-2px)}
+    .to-top{position:fixed;right:20px;bottom:22px;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(10px);transition:all var(--transition);z-index:105}
+    .to-top.show{opacity:1;visibility:visible;transform:none}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s var(--transition),transform .6s var(--transition)}
+    .reveal.is-visible{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){.aurora,.wave{display:none} .reveal{opacity:1;transform:none;transition:none}}
+    :target{scroll-margin-top:90px}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:130}
+    .modal.open{display:flex}
+    .modal-card{width:min(960px,95vw);height:min(85vh,900px);background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+    .modal-body{flex:1;min-height:0;position:relative}
+    .modal iframe{width:100%;height:100%;border:0}
+    .skeleton{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.06), rgba(255,255,255,.03));background-size:200% 100%;animation:shimmer 1.4s infinite}
+    @keyframes shimmer{to{background-position: -200% 0}}
+    details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--surface)}
+    details[open]{box-shadow:var(--shadow)}
+    summary{cursor:pointer;font-weight:800;list-style:none}
+    summary::-webkit-details-marker{display:none}
+
+    /* Impact (prosty) */
+    .impact{display:grid;gap:12px}
+    .range{appearance:none;width:100%;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--accent));outline:none}
+    .range::-webkit-slider-thumb{appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid #0a0f1d;box-shadow:0 2px 8px rgba(0,0,0,.3);cursor:pointer}
+    .range::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid #0a0f1d;box-shadow:0 2px 8px rgba(0,0,0,.3);cursor:pointer}
+    .impact-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:800px){.impact-stats{grid-template-columns:1fr}}
+    .impact .mini{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+    .impact .mini .val{font-weight:900;font-size:1.6rem;color:var(--accent2)}
+  </style>
+</head>
+<body>
+
+<a href="#content" class="skip-link">Przejdź do treści</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="top" role="navigation" aria-label="Główna nawigacja">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Strona główna – EduBridge Africa">
+      <img class="brand-logo" src="assets/logo.png" alt="Logo EduBridge Africa" decoding="async" loading="eager" fetchpriority="high" onerror="this.style.display='none'">
+    </a>
+    <button class="mobile-toggle" aria-label="Otwórz menu" aria-controls="primary-nav" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+    <div class="nav-links" id="primary-nav">
+      <a href="#about">O projekcie</a>
+      <a href="#modules">Moduły</a>
+      <a href="#beneficiaries">Kto skorzysta</a>
+      <a href="#team">Zespół</a>
+      <a href="#partners" class="btn btn-primary">Zostań partnerem</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta" role="region" aria-label="Szybkie działania">
+  <button class="btn btn-primary" id="openForm"><i class="fas fa-handshake" aria-hidden="true"></i> Zostań partnerem</button>
+  <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://uewrc-my.sharepoint.com/:p:/g/personal/191214_student_ue_wroc_pl/EX-Wbp_sUoBJlTdoN9UGYMEBzn0EghIM67M-TnWg2XfSkQ?e=wb6Q2y"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Pitch deck</a>
+</div>
+
+<main id="content" role="main">
+  <!-- HERO -->
+  <header class="hero" aria-label="Wprowadzenie">
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container">
+      <div class="grid">
+        <div class="col-7">
+          <h1>Budujemy <span class="typed-emph">mosty kompetencji</span> między Polską a Afryką</h1>
+
+          <!-- Most Polska–Kenia -->
+          <div class="bridge" aria-hidden="true">
+            <svg viewBox="0 0 640 180" role="img">
+              <title>Most Polska – Kenia</title>
+              <defs>
+                <linearGradient id="gradBridge" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="var(--brand)"/><stop offset="100%" stop-color="var(--accent)"/>
+                </linearGradient>
+                <linearGradient id="towerGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(255,255,255,.28)"/><stop offset="100%" stop-color="rgba(255,255,255,.08)"/>
+                </linearGradient>
+                <path id="deckPath" d="M40 120 C 200 20, 440 20, 600 120" />
+              </defs>
+
+              <path class="wave" d="M0 150 Q 40 140 80 150 T 160 150 T 240 150 T 320 150 T 400 150 T 480 150 T 560 150 T 640 150"/>
+              <path class="wave" d="M0 160 Q 40 150 80 160 T 160 160 T 240 160 T 320 160 T 400 160 T 480 160 T 560 160 T 640 160" style="animation-duration:7s;opacity:.7"/>
+              <!-- PL -->
+              <g transform="translate(30,60)">
+                <rect class="tower" x="0" y="10" width="30" height="70" rx="4"/>
+                <g class="flag" transform="translate(8,-10)">
+                  <rect x="0" y="0" width="18" height="12" fill="#fff"/>
+                  <rect x="0" y="6" width="18" height="6" fill="#dc2626"/>
+                </g>
+                <text x="15" y="95" fill="currentColor" font-size="12" text-anchor="middle">Polska</text>
+              </g>
+              <!-- KE -->
+              <g transform="translate(580,60)">
+                <rect class="tower" x="0" y="10" width="30" height="70" rx="4"/>
+                <g class="flag" transform="translate(8,-10)">
+                  <rect x="0" y="0" width="18" height="12" fill="#000"/>
+                  <rect x="0" y="4" width="18" height="4" fill="#b91c1c"/>
+                  <rect x="0" y="8" width="18" height="4" fill="#065f46"/>
+                </g>
+                <text x="15" y="95" fill="currentColor" font-size="12" text-anchor="middle">Kenia</text>
+              </g>
+
+              <use href="#deckPath" class="deck"/>
+              <g class="hanger" stroke-linecap="round">
+                <line x1="140" y1="70" x2="140" y2="120"/>
+                <line x1="240" y1="40" x2="240" y2="120"/>
+                <line x1="320" y1="30" x2="320" y2="120"/>
+                <line x1="400" y1="40" x2="400" y2="120"/>
+                <line x1="500" y1="70" x2="500" y2="120"/>
+              </g>
+
+              <circle r="5" fill="var(--accent2)">
+                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#deckPath"/>
+                </animateMotion>
+              </circle>
+            </svg>
+          </div>
+
+          <p style="margin-top:14px">
+            EduBridge Africa to społeczna inicjatywa studentów Uniwersytetu Ekonomicznego we Wrocławiu. W czerwcu 2026 prowadzimy w okolicach Mombasy, Kenia, praktyczne warsztaty z
+            <span class="typed-emph"><span class="typed" aria-live="polite">sztucznej inteligencji.</span><span class="caret" aria-hidden="true"></span></span>
+            Po warsztatach zostawiamy materiały i sprzęt, aby szkoły mogły kontynuować naukę.
+          </p>
+
+          <div class="badges" aria-label="Informacje o projekcie">
+            <span class="badge"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Czerwiec 2026</span>
+            <span class="badge"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Mombasa, Kenia</span>
+            <span class="badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Program „Uczelnie Przyszłości” – NCBR.</span>
+          </div>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:14px">
+            <button class="btn btn-primary" id="openForm2"><i class="fas fa-handshake" aria-hidden="true"></i> Zostań partnerem</button>
+            <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://uewrc-my.sharepoint.com/:p:/g/personal/191214_student_ue_wroc_pl/EX-Wbp_sUoBJlTdoN9UGYMEBzn0EghIM67M-TnWg2XfSkQ?e=wb6Q2y"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Prezentacja projektu</a>
+          </div>
+        </div>
+
+        <!-- Prawa kolumna hero -->
+        <div class="col-5">
+          <div class="hero-card tilt card" aria-label="Ilustracja projektu">
+            <div class="hero-media" style="position:relative;aspect-ratio:16/10;background:var(--surface-2)">
+              <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Uczniowie podczas zajęć komputerowych – edukacja cyfrowa w Kenii" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" fetchpriority="high">
+            </div>
+            <div class="kpi" role="list" aria-label="Najważniejsze elementy" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:20px;background:var(--surface-2);border-top:1px solid var(--line)">
+              <div class="item card" role="listitem" style="padding:14px"><b>Warsztaty edukacyjne</b><div class="note">2 tygodnie praktycznej nauki</div></div>
+              <div class="item card" role="listitem" style="padding:14px"><b>Szkolenie nauczycieli</b><div class="note">Wiedza, która zostaje na dłużej</div></div>
+              <div class="item card" role="listitem" style="padding:14px"><b>Wyposażenie szkół</b><div class="note">Sprzęt i materiały na stałe</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section id="stats" aria-labelledby="stats-title">
+    <div class="container">
+      <h2 id="stats-title" style="margin-bottom:22px">Kluczowe wskaźniki</h2>
+      <div class="stats-grid">
+        <div class="stat-card reveal"><div class="stat-value" data-target="100" data-suffix="+">0</div><div class="stat-label">Uczniów</div></div>
+        <div class="stat-card reveal"><div class="stat-value" data-target="10" data-suffix="+">0</div><div class="stat-label">Nauczycieli</div></div>
+        <div class="stat-card reveal"><div class="stat-value" data-target="25" data-suffix="+">0</div><div class="stat-label">Godzin warsztatów</div></div>
+        <div class="stat-card reveal"><div class="stat-value" data-target="2">0</div><div class="stat-label">Tygodnie projektu</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container grid">
+      <div class="col-7 prose reveal">
+        <h2 id="about-title">O projekcie</h2>
+        <p>EduBridge Africa przeciwdziała wykluczeniu cyfrowemu dzieci i młodzieży w Kenii. Działamy w szkołach we współpracy z lokalnymi nauczycielami i organizacjami, kładąc nacisk na praktykę, bezpieczeństwo i trwałość efektów.</p>
+        <p>Celem projektu jest zbudowanie trwałego mostu edukacyjnego i komunikacyjnego w Kenii poprzez praktyczne warsztaty dla dzieci oraz pomoc szkołom i nauczycielom, dokumentowane profesjonalnymi filmami. Docelowo stworzymy społeczność, która cyklicznie wspiera edukację cyfrową w krajach rozwijających się.</p>
+
+        <div class="grid" data-cols="2">
+          <div class="card feature tilt">
+            <div class="icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+            <div><h3 style="margin:0 0 6px">Praktyka i bezpieczeństwo</h3><p>Nacisk na praktyczne umiejętności i cyberhigienę w codziennym korzystaniu z technologii.</p></div>
+          </div>
+          <div class="card feature tilt">
+            <div class="icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div><h3 style="margin:0 0 6px">Train‑the‑trainer</h3><p>Szkolimy nauczycieli i zostawiamy gotowe scenariusze zajęć. Po projekcie spotykamy się online, wymieniamy doświadczenia i uczymy się razem.</p></div>
+          </div>
+        </div>
+
+        <ul class="list" style="margin-top:16px">
+          <li>Prowadzimy 2‑tygodniowe, praktyczne warsztaty dla uczniów i nauczycieli</li>
+          <li>Tworzymy i przekazujemy scenariusze zajęć dostosowane do lokalnych potrzeb</li>
+          <li>Przekazujemy sprzęt i materiały edukacyjne dostępne online/offline</li>
+          <li>Dokumentujemy projekt (wideo, case study) i dzielimy się wnioskami</li>
+        </ul>
+      </div>
+
+      <div class="col-5 reveal" id="modules" aria-labelledby="modules-title">
+        <div class="card tilt">
+          <h3 id="modules-title">Moduły warsztatów</h3>
+          <span class="pill alt"><i class="fas fa-shield-alt" aria-hidden="true"></i> Online Safety</span>
+          <span class="pill alt"><i class="fas fa-laptop" aria-hidden="true"></i> Basic Computer Skills</span>
+          <span class="pill alt"><i class="fas fa-robot" aria-hidden="true"></i> Introduction to AI</span>
+          <span class="pill alt"><i class="fas fa-comments" aria-hidden="true"></i> Communication Skills</span>
+          <p class="note" style="margin-top:8px">Format: krótkie bloki, ćwiczenia praktyczne, proste projekty i grywalizacja.</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Innowacyjność</h3>
+          <ul class="list">
+            <li>Zderzenie edukacji cyfrowej – wciąż mało znanej i dostępnej w Polsce – z realiami Afryki</li>
+            <li>Produkcja materiałów edukacyjnych na tematy wcześniej nieznane lokalnym społecznościom</li>
+            <li>Współtworzenie programu z lokalnymi nauczycielami (dopasowanie do CBC)</li>
+            <li>Model skalowalny: prosty do powtórzenia w kolejnych szkołach i regionach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIARIES -->
+  <section id="beneficiaries" aria-labelledby="beneficiaries-title">
+    <div class="container">
+      <div class="section-center reveal"><h2 id="beneficiaries-title">Kto skorzysta</h2></div>
+
+      <div class="grid" data-cols="3">
+        <div class="card feature tilt">
+          <div class="icon" style="background:linear-gradient(135deg,#a78bfa,#ec4899)" aria-hidden="true"><i class="fas fa-child"></i></div>
+          <div><h3 style="margin:0 0 6px">Uczniowie</h3><p>Dzieci i młodzież zdobędą kompetencje cyfrowe i miękkie niezbędne we współczesnym świecie.</p></div>
+        </div>
+        <div class="card feature tilt">
+          <div class="icon" style="background:linear-gradient(135deg,#06b6d4,#22d3ee)" aria-hidden="true"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div><h3 style="margin:0 0 6px">Nauczyciele</h3><p>Przeszkoleni nauczyciele będą mogli samodzielnie prowadzić zajęcia po zakończeniu projektu.</p></div>
+        </div>
+        <div class="card feature tilt">
+          <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#f97316)" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+          <div><h3 style="margin:0 0 6px">Partnerzy</h3><p>Firmy i instytucje zyskają możliwość wsparcia konkretnej inicjatywy z mierzalnym efektem.</p></div>
+        </div>
+      </div>
+
+      <div class="grid" data-cols="2" style="margin-top:26px">
+        <div class="card">
+          <h3>Efekty projektu</h3>
+          <ul class="list">
+            <li>80–120 uczniów i 10–20 nauczycieli przeszkolonych (25+ h zajęć)</li>
+            <li>Sprzęt i zestawy edukacyjne przekazane szkołom + spotkania online po projekcie</li>
+            <li>2–3 filmy z przebiegu projektu (ok. 45 minut każdy) oraz studium przypadku dla partnerów</li>
+            <li>Raport z rezultatów – wskaźniki, opinie uczestników i rekomendacje</li>
+            <li>Budowa społeczności i partnerstw dla kolejnych edycji</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Formalności i etyka</h3>
+          <ul class="list">
+            <li>Polityka ochrony dzieci i zgody na wizerunek (PL/EN) — zgody pisemne; osoby bez zgody oznaczone; zajęcia w parach dorosłych</li>
+            <li>RODO i bezpieczne przetwarzanie — minimalne dane; szyfrowane i z ograniczonym dostępem; raporty anonimizowane; usuwanie po 12 mies</li>
+            <li>Etyczne filmowanie — tylko osoby ze zgodą; bez stygmatyzacji i pełnej identyfikacji; publikacje konsultowane ze szkołą</li>
+            <li>OER i dostępność offline — licencje CC (np. BY 4.0); wersje offline (PDF/USB); dostępność: napisy i alt‑teksty</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT (prosty) -->
+  <section id="impact" aria-labelledby="impact-title">
+    <div class="container reveal">
+      <h2 id="impact-title">Szacowany wpływ wsparcia</h2>
+      <div class="card impact">
+        <label for="impactRange"><b>Wartość wsparcia (PLN lub ekwiwalent rzeczowy)</b></label>
+        <input class="range" type="range" id="impactRange" min="0" max="100000" step="500" value="15000" aria-describedby="impactHint">
+        <div id="impactHint" class="note">
+          Założenia: 1 laptop ~ 2500 PLN ⇒ min. 10 uczniów; 1 hotspot (urządzenie + 12 mies. danych) ~ 700 PLN ⇒ min. 10 uczniów.
+        </div>
+        <div class="impact-stats">
+          <div class="mini"><div class="val" id="impactLaptops">0</div><div class="note">Szacowana liczba laptopów</div></div>
+          <div class="mini"><div class="val" id="impactHotspots">0</div><div class="note">Szacowana liczba hotspotów</div></div>
+          <div class="mini"><div class="val" id="impactStudents">0</div><div class="note">Uczniów objętych (min., laptopy)</div></div>
+        </div>
+        <div class="note" id="impactSentence">
+          Przykład: 0 PLN ⇒ 0 laptopów i 0 hotspotów ⇒ min. 0 uczniów (laptopy) + min. 0 uczniów z łącznością (hotspoty).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-center reveal"><h2 id="team-title">Nasz Zespół</h2></div>
+      <p class="note" style="text-align:center;margin:-8px 0 20px">Wszyscy jesteśmy studentami Uniwersytetu Ekonomicznego we Wrocławiu z pasją do technologii i edukacji.</p>
+
+      <div class="grid" data-cols="3">
+        <div class="card reveal tilt" style="display:flex;gap:14px;align-items:flex-start">
+          <div class="icon" style="border-radius:50%;width:64px;height:64px;color:#0a0f1d" aria-hidden="true"><strong>KS</strong></div>
+          <div><h3 style="margin:0 0 6px">Kamil Siecla</h3><p>Koordynator projektu. Doświadczenie w organizacji wydarzeń i pracy z młodzieżą. Odpowiada za program, partnerstwa oraz rozwój strategiczny.</p></div>
+        </div>
+        <div class="card reveal tilt" style="display:flex;gap:14px;align-items:flex-start">
+          <div class="icon" style="border-radius:50%;width:64px;height:64px;color:#0a0f1d" aria-hidden="true"><strong>MK</strong></div>
+          <div><h3 style="margin:0 0 6px">Mateusz Kowalczewski</h3><p>Logistyka i partnerstwa. Wieloletnie doświadczenie w organizowaniu eventów; zarządzanie budżetem i harmonogramem.</p></div>
+        </div>
+        <div class="card reveal tilt" style="display:flex;gap:14px;align-items:flex-start">
+          <div class="icon" style="border-radius:50%;width:64px;height:64px;color:#0a0f1d" aria-hidden="true"><strong>RF</strong></div>
+          <div><h3 style="margin:0 0 6px">Radosław Fabiszewski</h3><p>Wideo i dokumentacja. Doświadczenie podróżnicze (wyprawy po Europie), storytelling i produkcja treści.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners" aria-labelledby="partners-title">
+    <div class="container">
+      <div class="grid">
+        <div class="col-7 prose reveal">
+          <h2 id="partners-title">Dołącz jako partner</h2>
+          <p>Chcesz realnie zmniejszyć wykluczenie cyfrowe? Dołącz do EduBridge Africa jako partner. Szukamy sprzętu, przestrzeni, danych mobilnych, noclegów i wsparcia logistycznego oraz mentorsko‑szkoleniowego.</p>
+          <ul class="list">
+            <li>Widoczność: logo w filmie, na stronie i materiałach; wzmianki w mediach oraz promocja na uczelni</li>
+            <li>Pakiet PR: zdjęcia, filmy i case study + możliwość prelekcji dla Twojego zespołu</li>
+            <li>Raport z efektów – konkretne wskaźniki oraz wypowiedzi uczestników</li>
+            <li>Szansa na wolontariat kompetencyjny i długofalową współpracę</li>
+          </ul>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px">
+            <button class="btn btn-primary" id="openForm3"><i class="fas fa-paper-plane" aria-hidden="true"></i> Wyślij zgłoszenie</button>
+            <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="mailto:edubridge.kamilsiecla@gmail.com?subject=Partnerstwo%20-%20EduBridge%20Africa"><i class="fas fa-envelope" aria-hidden="true"></i> Napisz do nas</a>
+          </div>
+        </div>
+
+        <div class="col-5 reveal">
+          <div class="card tilt">
+            <div class="footer-brand" style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <img src="assets/logo.png" alt="EduBridge Africa" style="height:36px;width:auto" loading="lazy" fetchpriority="low">
+            </div>
+            <h3>Dane kontaktowe</h3>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> E‑mail: <a href="mailto:edubridge.kamilsiecla@gmail.com">edubridge.kamilsiecla@gmail.com</a></p>
+            <p><i class="fab fa-whatsapp" aria-hidden="true"></i> Tel./WhatsApp: <a href="https://wa.me/48601910704" target="_blank" rel="noopener noreferrer">+48 601 910 704</a></p>
+            <div style="margin-top:14px;padding:14px;border:1px dashed var(--line);border-radius:12px;background:var(--surface-2)">
+              <p style="margin:0 0 6px"><i class="fas fa-university" aria-hidden="true"></i> Afiliacja: Uniwersytet Ekonomiczny we Wrocławiu</p>
+              <p style="margin:0"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Program „Uczelnie Przyszłości” – NCBR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGLISH SUMMARY -->
+  <section id="en" lang="en" aria-labelledby="en-title">
+    <div class="container">
+      <details class="reveal" open>
+        <summary id="en-title">English summary for partners</summary>
+        <div style="margin-top:12px">
+          <p>EduBridge Africa is a student‑led initiative from the Wroclaw University of Economics and Business. In June 2026 we will deliver a two‑week series of hands‑on digital literacy workshops for schools around Mombasa, Kenya: safe internet and cyber hygiene, basic computer skills, an introduction to AI and responsible technology use, plus communication and presentation. Co‑created with local teachers, the program includes train‑the‑trainer sessions; we will also leave equipment and open educational resources (online/offline) so learning continues after we leave. Our aim is to build a lasting educational and communication bridge in Kenya through practical workshops for children and support for schools and teachers, documented with professional films, and to grow a community that regularly supports digital education in developing countries.</p>
+          <p>We are seeking in‑kind partnership and support across equipment, connectivity, accommodation, local transport and mentoring/logistics. In return we provide brand visibility across film, website and materials, a case study and PR package, an impact report with KPIs, and talks for your team.</p>
+          <p><b>Contact:</b> edubridge.kamilsiecla@gmail.com · WhatsApp: +48 601 910 704<br><b>Affiliation:</b> Wroclaw University of Economics and Business | “Universities of the Future” – NCBR.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="reveal">
+        <div class="footer-brand">
+          <h3 style="color:#fff;margin:0">EduBridge Africa</h3>
+        </div>
+        <p>Studencki projekt UE Wrocław · Czerwiec 2026 · Kenia</p>
+        <p>Kontakt: <a href="mailto:edubridge.kamilsiecla@gmail.com">edubridge.kamilsiecla@gmail.com</a> · <a href="https://wa.me/48601910704" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      </div>
+      <div class="reveal">
+        <h3 style="color:#fff;margin:0 0 .6rem">Informacje</h3>
+        <p class="note">Dane z formularzy wykorzystujemy wyłącznie do kontaktu dot. projektu i raportowania efektów (zagregowane, bez danych wrażliwych).</p>
+        <p class="note" style="margin-top:.6rem">Projekt realizowany w ramach programu „Uczelnie Przyszłości” – NCBR.</p>
+      </div>
+    </div>
+    <div class="note" style="text-align:center;padding-top:14px;border-top:1px solid rgba(148,163,184,.15)">
+      © <span id="y"></span> EduBridge Africa. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Wróć do góry"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+
+<!-- Modal z osadzonym formularzem -->
+<div class="modal" id="formModal" aria-labelledby="formTitle" aria-modal="true" role="dialog">
+  <div class="modal-card" tabindex="-1">
+    <div class="modal-head">
+      <strong id="formTitle">Zostań partnerem – formularz</strong>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn btn-primary" id="closeForm" aria-label="Zamknij modal"><i class="fas fa-times" aria-hidden="true"></i> Zamknij</button>
+      </div>
+    </div>
+    <div class="modal-body" aria-busy="true">
+      <div class="skeleton" id="formSkeleton" aria-hidden="true"><span class="sr-only">Ładowanie formularza…</span></div>
+      <iframe title="Formularz partnera" id="formFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSdVuIp03OhGVKtoCgzCWKoMMY7l2ojOsjJi2ctcUUqMVZxVrA/viewform?embedded=true" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Rok w stopce
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const nav = document.querySelector('.nav');
+  const toggleBtn = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  function setOpen(state){ nav.classList.toggle('open', state); toggleBtn.setAttribute('aria-expanded', state ? 'true' : 'false'); }
+  toggleBtn.addEventListener('click', ()=> setOpen(!nav.classList.contains('open')));
+  addEventListener('keydown', (e)=>{ if(e.key==='Escape') setOpen(false) });
+  addEventListener('click', (e)=>{ if(nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false) });
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=> setOpen(false)));
+
+  // Pasek postępu + sticky CTA
+  const progress = document.getElementById('progress');
+  const stickyCta = document.getElementById('stickyCta');
+  const updateUI = () => {
+    const h = document.documentElement;
+    const max = Math.max(1, h.scrollHeight - h.clientHeight);
+    const ratio = Math.min(1, Math.max(0, h.scrollTop / max));
+    progress.style.transform = `scaleX(${ratio})`;
+    stickyCta.classList.toggle('show', (scrollY||h.scrollTop) > 500);
+  };
+  addEventListener('scroll', updateUI, {passive:true});
+  addEventListener('resize', updateUI);
+  updateUI();
+
+  // Reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries)=>entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); ro.unobserve(e.target);} }), {threshold:.15});
+  revealEls.forEach(el=>ro.observe(el));
+
+  // Active menu link
+  const ids = ['about','modules','beneficiaries','team','partners'];
+  const sectionLinks = [...document.querySelectorAll('.nav-links a')].filter(a=>ids.includes(a.getAttribute('href').slice(1)));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      const link = sectionLinks.find(a=>a.getAttribute('href')==='#'+e.target.id);
+      if(link && e.isIntersecting){
+        sectionLinks.forEach(l=>{ l.classList.remove('active'); l.removeAttribute('aria-current'); });
+        link.classList.add('active'); link.setAttribute('aria-current','location');
+      }
+    });
+  },{rootMargin:'-45% 0px -45% 0px'});
+  ids.forEach(id=>{ const el=document.getElementById(id); if(el) io.observe(el); });
+
+  // Tilt
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.tilt').forEach(card=>{
+      const max = 10; let rafId = null;
+      function onMove(e){
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        const rx = (0.5 - y) * (max*2), ry = (x - 0.5) * (max*2);
+        cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(()=>{ card.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`; });
+      }
+      function onLeave(){ cancelAnimationFrame(rafId); card.style.transform = 'perspective(900px) rotateX(0) rotateY(0)'; }
+      card.addEventListener('mousemove', onMove);
+      card.addEventListener('mouseleave', onLeave);
+      card.addEventListener('blur', onLeave);
+    });
+  }
+
+  // Liczniki w statystykach
+  (function(){
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const counters = document.querySelectorAll('.stat-value[data-target]');
+    if (!counters.length) return;
+    function animateCount(el){
+      const target = Number(el.getAttribute('data-target'))||0;
+      const suffix = el.getAttribute('data-suffix')||'';
+      const nf = new Intl.NumberFormat(document.documentElement.lang||'pl-PL');
+      const duration = 1100; const start = performance.now();
+      function frame(now){
+        const t = Math.min(1,(now-start)/duration);
+        el.textContent = nf.format(Math.round(target*easeOutCubic(t)))+suffix;
+        if(t<1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+    const obs = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); obs.unobserve(e.target);} }),{threshold:.6});
+    counters.forEach(el=>obs.observe(el));
+  })();
+
+  // Modal + focus trap + skeleton
+  const modal = document.getElementById('formModal');
+  const modalCard = modal.querySelector('.modal-card');
+  const openers = [document.getElementById('openForm'), document.getElementById('openForm2'), document.getElementById('openForm3')].filter(Boolean);
+  const closeBtn = document.getElementById('closeForm');
+  const formFrame = document.getElementById('formFrame');
+  const skeleton = document.getElementById('formSkeleton');
+  let lastFocus, inertSiblings = [];
+  function setSiblingsInert(state){
+    inertSiblings = [...document.body.children].filter(el=>el!==modal);
+    inertSiblings.forEach(el=>{
+      if(state){ el.setAttribute('aria-hidden','true'); el.inert = true; }
+      else { el.removeAttribute('aria-hidden'); el.inert = false; }
+    });
+  }
+  function trapFocus(e){
+    if(!modal.classList.contains('open')) return;
+    const focusable = modal.querySelectorAll('a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+    if(!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length-1];
+    if(e.key === 'Tab'){
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    } else if(e.key === 'Escape'){ closeModal(); }
+  }
+  function openModal(){
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    setSiblingsInert(true);
+    setTimeout(()=> modalCard.focus(), 0);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    setSiblingsInert(false);
+    lastFocus && lastFocus.focus();
+  }
+  openers.forEach(b=>b.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
+  addEventListener('keydown', trapFocus);
+  formFrame.addEventListener('load', ()=> {
+    skeleton.style.display='none';
+    modal.querySelector('.modal-body').setAttribute('aria-busy','false');
+  }, { once:true });
+
+  // Typed
+  (function(){
+    const el = document.querySelector('.typed'); if(!el) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = 'sztucznej inteligencji.'; return; }
+    const words = ['obsługi komputerów','bezpiecznego internetu','sztucznej inteligencji','komunikacji i prezentacji'];
+    let i=0,pos=0,dir=1; const speed=44,pause=1050;
+    function render(t){ el.textContent=t; }
+    function tick(){
+      const w=words[i];
+      if(dir===1){ if(pos<w.length){ pos++; render(w.slice(0,pos)); return setTimeout(tick,speed); }
+        render(w+'.'); return setTimeout(()=>{ dir=-1; setTimeout(tick,speed); }, pause);
+      } else {
+        if(pos===w.length){ render(w); pos--; return setTimeout(tick,speed*0.8); }
+        if(pos>0){ render(w.slice(0,pos)); pos--; return setTimeout(tick,speed*0.8); }
+        dir=1; i=(i+1)%words.length; setTimeout(tick,220);
+      }
+    }
+    tick();
+  })();
+
+  // Back to top
+  const toTop = document.getElementById('toTop');
+  const toggleToTop = () => { toTop.classList.toggle('show', (scrollY||document.documentElement.scrollTop) > 600); };
+  addEventListener('scroll', toggleToTop, {passive:true}); toggleToTop();
+
+  // Impact (prosty): laptopy + hotspoty
+  (function(){
+    const range = document.getElementById('impactRange');
+    const outL = document.getElementById('impactLaptops');
+    const outH = document.getElementById('impactHotspots');
+    const outS = document.getElementById('impactStudents');
+    const sentence = document.getElementById('impactSentence');
+    const nf = new Intl.NumberFormat('pl-PL');
+
+    // Założenia – łatwo zmienisz w jednym miejscu
+    const laptopCost = 2500;          // PLN
+    const perLaptopStudents = 10;     // min. 10 uczniów / 1 laptop
+    const hotspotCost = 700;          // PLN (urządzenie + 12 mies. danych)
+    const perHotspotStudents = 10;    // min. 10 uczniów / 1 hotspot
+
+    function calc(){
+      const v = Number(range.value)||0;
+
+      const laptops = Math.floor(v / laptopCost);
+      const hotspots = Math.floor(v / hotspotCost);
+      const studentsFromLaptops = laptops * perLaptopStudents;
+      const studentsFromHotspots = hotspots * perHotspotStudents;
+
+      outL.textContent = nf.format(laptops);
+      outH.textContent = nf.format(hotspots);
+      outS.textContent = nf.format(studentsFromLaptops);
+
+      sentence.textContent =
+        `Przykład: Za ${nf.format(v)} PLN kupimy ${nf.format(laptops)} laptopów i ${nf.format(hotspots)} ` +
+        `hotspotów. Dzięki temu pomożemy ok. ${nf.format(studentsFromLaptops)} uczniom z dostępem do laptopów i ` +
+        `ok. ${nf.format(studentsFromHotspots)} z dostępem do internetu.`;
+
+      try{ localStorage.setItem('impact.v', String(v)); }catch{}
+    }
+    try{
+      const saved = localStorage.getItem('impact.v');
+      if(saved) range.value = saved;
+    }catch{}
+    range.addEventListener('input', calc);
+    calc();
+  })();
+</script>
+
+<!-- JSON‑LD -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"EduBridge Africa","url":"https://twoj-adres-strony.example/","sameAs":["https://www.ue.wroc.pl/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"EduBridge Africa","url":"https://twoj-adres-strony.example/","logo":"https://twoj-adres-strony.example/assets/logo.png","contactPoint":[{"@type":"ContactPoint","contactType":"Partnerships","email":"edubridge.kamilsiecla@gmail.com","telephone":"+48 601 910 704","areaServed":"KE"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Project","name":"Budujemy mosty kompetencji między Polską a Afryką – EduBridge Africa","description":"Student-led digital skills workshops around Mombasa, Kenya: computer basics, safe internet, AI, communication; co-created with teachers; equipment and OER left for sustained learning.","startDate":"2026-06-01","endDate":"2026-06-30","url":"https://twoj-adres-strony.example/","creator":{"@type":"EducationalOrganization","name":"Uniwersytet Ekonomiczny we Wrocławiu"},"areaServed":{"@type":"Country","name":"KE"}}
+</script>
+
+<noscript>
+  <style>.reveal{opacity:1;transform:none}.caret{display:none}</style>
+  <div style="background:#111a31;color:#e6eefb;padding:12px;text-align:center">Masz wyłączony JavaScript – strona działa, ale animacje i formularz w modalu będą ograniczone.</div>
+</noscript>
+</body>
+</html>
